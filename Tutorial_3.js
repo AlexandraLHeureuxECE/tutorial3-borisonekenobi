@@ -55,12 +55,12 @@ function printData() // this function doesn't take any argument
 {
     // Expecting to be use with objects (one object at a time) that have temperature, precipitation and humidity properties
     // print each property and their values on the console. Ignore the last statement.
-    console.log(`temperature = ${temperature} , precipitation = ${precipitation} , humidity = ${humidity}, numProp=${/*DO NOT CHANGE*/Object.keys(this).length}`)
+    console.log(`temperature = ${this.temperature} , precipitation = ${this.precipitation} , humidity = ${this.humidity}, numProp=${/*DO NOT CHANGE*/Object.keys(this).length}`)
 }
 
 for (let data of data_cleaned) // create a loop that iterates over the elements of the cleaned array
 {
     // Execute the printPoint function so that it would print the data at the current element of the array
     // without changing the structures of the objects themselves. HINT: Calling a function with an object
-    data[printData]
+    printData.call(data);
 }
