@@ -62,5 +62,5 @@ for (let data of data_cleaned) // create a loop that iterates over the elements 
 {
     // Execute the printPoint function so that it would print the data at the current element of the array
     // without changing the structures of the objects themselves. HINT: Calling a function with an object
-    data.call(printData)
+    data[printData]
 }
